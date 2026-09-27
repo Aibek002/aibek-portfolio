@@ -1,5 +1,6 @@
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, Camera, Music2, Send, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { ResumeModal } from '@/components/resume-modal'
 import { Starfield } from '@/components/starfield'
 import { SolarSystem } from '@/components/solar-system'
 
@@ -24,9 +25,14 @@ export default function Page() {
       <section className="relative mx-auto flex min-h-svh max-w-6xl flex-col items-center gap-12 px-6 py-16 lg:flex-row lg:justify-between lg:gap-8 lg:py-0">
         {/* Text block */}
         <div className="order-2 max-w-xl text-center lg:order-1 lg:text-left">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70 backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-yellow-300" aria-hidden="true" />
-            Backend &amp; AI Engineer
+          <div className="mb-6 flex flex-col items-center gap-3 lg:items-start">
+            <p className="font-display text-sm font-semibold tracking-[0.2em] text-white/80 uppercase">
+              Айбек Сейтжан
+            </p>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-white/70 backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-yellow-300" aria-hidden="true" />
+              Full Stack Developer
+            </div>
           </div>
 
           <h1 className="text-balance font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -55,13 +61,7 @@ export default function Page() {
               Мои работы
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white sm:w-auto"
-            >
-              Обсудить проект
-            </Button>
+            <ResumeModal />
           </div>
         </div>
 
@@ -70,6 +70,29 @@ export default function Page() {
           <SolarSystem />
         </div>
       </section>
+
+      <footer className="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 border-t border-white/10 px-6 py-6 text-sm text-white/45 sm:flex-row">
+        <p>Айбек Сейтжан · asweb.tech</p>
+        <nav aria-label="Социальные сети" className="flex items-center gap-2">
+          {[
+            { label: 'Telegram', href: 'https://t.me/asweb.tech', icon: Send },
+            { label: 'TikTok', href: 'https://tiktok.com/@asweb.tech', icon: Music2 },
+            { label: 'Instagram', href: 'https://instagram.com/asweb.tech', icon: Camera },
+            { label: 'LinkedIn', href: 'https://linkedin.com/in/asweb.tech', icon: BriefcaseBusiness },
+          ].map(({ label, href, icon: Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${label} — asweb.tech`}
+              className="flex size-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/55 transition-colors hover:border-white/25 hover:bg-white/10 hover:text-white"
+            >
+              <Icon aria-hidden="true" />
+            </a>
+          ))}
+        </nav>
+      </footer>
     </main>
   )
 }
