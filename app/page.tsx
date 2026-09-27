@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button'
 import { ResumeModal } from '@/components/resume-modal'
 import { Starfield } from '@/components/starfield'
 import { SolarSystem } from '@/components/solar-system'
+import { SiteNav } from '@/components/site-nav'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -11,6 +13,7 @@ export default function Page() {
       style={{ backgroundColor: '#020205' }}
     >
       <Starfield />
+      <SiteNav />
 
       {/* Soft nebula gradient wash */}
       <div
@@ -55,11 +58,14 @@ export default function Page() {
 
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start lg:justify-start">
             <Button
+              asChild
               size="lg"
               className="group w-full bg-yellow-400 text-black hover:bg-yellow-300 sm:w-auto"
             >
-              Мои работы
-              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Link href="/projects">
+                Мои работы
+                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
             <ResumeModal />
           </div>
