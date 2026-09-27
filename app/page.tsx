@@ -84,10 +84,10 @@ export default function Page() {
         <p>Айбек Сейтжан · asweb.tech</p>
         <nav aria-label="Социальные сети" className="flex items-center gap-2">
           {[
-            { label: 'Telegram', href: 'https://t.me/asweb.tech', icon: Send },
+            { label: 'Telegram', href: 'https://t.me/aswebtech', icon: Send },
             { label: 'TikTok', href: 'https://tiktok.com/@asweb.tech', icon: Music2 },
             { label: "Instagram", href: 'https://instagram.com/asweb.tech', icon: Camera },
-            { label: 'LinkedIn', href: 'https://linkedin.com/in/asweb.tech', icon: BriefcaseBusiness },
+            { label: 'LinkedIn', href: 'https://linkedin.com/in/aibek-seitzhan', icon: BriefcaseBusiness },
           ].map(({ label, href, icon: Icon }) => (
             <a
               key={label}

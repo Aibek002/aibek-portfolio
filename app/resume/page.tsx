@@ -4,7 +4,7 @@ import { SpaceShell, pageTransition } from '@/components/site-nav'
 
 const socialLinks = [
   { label: 'Telegram', handle: '@aswebtech', href: 'https://t.me/aswebtech', icon: Send },
-  { label: 'LinkedIn', handle: '@Aibek_Seitzhan', href: 'https://linkedin.com/in/Aibek_Seitzhan', icon: BriefcaseBusiness },
+  { label: 'LinkedIn', handle: '@Aibek-Seitzhan', href: 'https://linkedin.com/in/Aibek-Seitzhan', icon: BriefcaseBusiness },
   { label: 'TikTok', handle: '@asweb.tech', href: 'https://tiktok.com/@asweb.tech', icon: ExternalLink },
   { label: 'Instagram', handle: '@asweb.tech', href: 'https://instagram.com/asweb.tech', icon: ExternalLink },
 ]
