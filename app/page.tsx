@@ -56,7 +56,7 @@ export default function Page() {
             под ключ: от идеи до запуска.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start lg:justify-start">
+          <div className="mt-8 flex w-full flex-col items-stretch gap-3 md:flex-row md:items-start md:justify-start">
             <Button
               asChild
               size="lg"
