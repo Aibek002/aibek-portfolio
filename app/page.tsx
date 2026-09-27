@@ -77,7 +77,7 @@ export default function Page() {
           {[
             { label: 'Telegram', href: 'https://t.me/asweb.tech', icon: Send },
             { label: 'TikTok', href: 'https://tiktok.com/@asweb.tech', icon: Music2 },
-            { label: 'Instagram', href: 'https://instagram.com/asweb.tech', icon: Camera },
+            { label: "Instagram", href: 'https://instagram.com/asweb.tech', icon: Camera },
             { label: 'LinkedIn', href: 'https://linkedin.com/in/asweb.tech', icon: BriefcaseBusiness },
           ].map(({ label, href, icon: Icon }) => (
             <a

@@ -15,14 +15,16 @@ import {
 export function ResumeModal() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Button
-          size="lg"
-          variant="outline"
-          className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white sm:w-auto"
-        >
-          Посмотреть резюме
-        </Button>
+      <DialogTrigger
+        render={
+          <Button
+            size="lg"
+            variant="outline"
+            className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white sm:w-auto"
+          />
+        }
+      >
+        Посмотреть резюме
       </DialogTrigger>
       <DialogContent showCloseButton={false} className="max-h-[90svh] overflow-y-auto border-white/10 bg-[#080a14]/95 text-white shadow-2xl shadow-blue-950/40 backdrop-blur-xl sm:max-w-2xl">
         <DialogHeader className="pr-8">
@@ -76,10 +78,16 @@ export function ResumeModal() {
           </section>
         </div>
 
-        <DialogClose asChild>
-          <Button variant="ghost" className="absolute right-4 top-4 text-white/60 hover:bg-white/10 hover:text-white" aria-label="Закрыть резюме">
-            <X aria-hidden="true" />
-          </Button>
+        <DialogClose
+          render={
+            <Button
+              variant="ghost"
+              className="absolute right-4 top-4 text-white/60 hover:bg-white/10 hover:text-white"
+              aria-label="Закрыть резюме"
+            />
+          }
+        >
+          <X aria-hidden="true" />
         </DialogClose>
       </DialogContent>
     </Dialog>
