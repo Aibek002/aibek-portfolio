@@ -1,6 +1,5 @@
 import { ArrowRight, BriefcaseBusiness, Camera, Music2, Send, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ResumeModal } from '@/components/resume-modal'
 import { Starfield } from '@/components/starfield'
 import { SolarSystem } from '@/components/solar-system'
 import { SiteNav } from '@/components/site-nav'
@@ -67,7 +66,11 @@ export default function Page() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <ResumeModal />
+            <Button asChild size="lg" variant="outline" className="h-11 w-full border-white/15 bg-white/5 text-white hover:bg-white/10 md:w-auto">
+              <Link href="/resume" className="flex items-center justify-center gap-2">
+                Посмотреть резюме
+              </Link>
+            </Button>
           </div>
         </div>
 

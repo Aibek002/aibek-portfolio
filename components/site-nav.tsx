@@ -8,6 +8,7 @@ const links = [
   { href: '/', label: 'Главная' },
   { href: '/blog', label: 'Блог' },
   { href: '/projects', label: 'Проекты' },
+  { href: '/resume', label: 'Резюме' },
 ]
 
 export function SiteNav() {
