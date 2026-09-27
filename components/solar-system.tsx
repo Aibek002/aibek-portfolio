@@ -19,10 +19,19 @@ function Orbit({ size, duration, reverse, children }: OrbitProps) {
         className="h-full w-full rounded-full"
         style={{
           animation: `spin ${duration}s linear infinite${reverse ? ' reverse' : ''}`,
+          transformOrigin: '50% 50%',
         }}
       >
         <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
-          {children}
+          <div
+            className="w-max"
+            style={{
+              animation: `spin ${duration}s linear infinite${reverse ? '' : ' reverse'}`,
+              transformOrigin: '50% 50%',
+            }}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </div>
