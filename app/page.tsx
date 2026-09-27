@@ -1,6 +1,5 @@
 import { ArrowRight, BriefcaseBusiness, Camera, Music2, Send, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ResumeModal } from '@/components/resume-modal'
 import { Starfield } from '@/components/starfield'
 import { SolarSystem } from '@/components/solar-system'
 import { SiteNav } from '@/components/site-nav'
@@ -56,18 +55,22 @@ export default function Page() {
             под ключ: от идеи до запуска.
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start lg:justify-start">
+          <div className="mt-8 flex w-full max-w-xs flex-col items-stretch justify-center gap-3 mx-auto md:max-w-none md:flex-row md:items-center md:w-auto md:gap-4">
             <Button
               asChild
               size="lg"
-              className="group w-full bg-yellow-400 text-black hover:bg-yellow-300 sm:w-auto"
+              className="group h-11 w-full bg-yellow-400 text-black hover:bg-yellow-300 md:w-auto"
             >
-              <Link href="/projects">
+              <Link href="/projects" className="flex items-center justify-center gap-2">
                 Мои работы
-                <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <ResumeModal />
+            <Button asChild size="lg" variant="outline" className="h-11 w-full border-white/15 bg-white/5 text-white hover:bg-white/10 md:w-auto">
+              <Link href="/resume" className="flex items-center justify-center gap-2">
+                Посмотреть резюме
+              </Link>
+            </Button>
           </div>
         </div>
 

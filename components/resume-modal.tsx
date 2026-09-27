@@ -20,7 +20,7 @@ export function ResumeModal() {
           <Button
             size="lg"
             variant="outline"
-            className="w-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white sm:w-auto"
+            className="h-11 w-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white md:w-auto"
           />
         }
       >
