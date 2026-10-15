@@ -18,7 +18,24 @@ export function SiteNav() {
     <header className="relative z-20 mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-5 sm:px-6 sm:py-6">
       <Link href="/" className="group flex items-center gap-3" aria-label="Айбек Сейтжан — главная" onClick={() => setIsOpen(false)}>
         <span className="flex size-9 items-center justify-center rounded-full border border-yellow-300/30 bg-yellow-300/10 text-yellow-200 transition-transform duration-300 group-hover:rotate-45">
-          <Orbit aria-hidden="true" className="size-5" />
+          {/* <Orbit aria-hidden="true" className="size-5" /> */}
+          <svg viewBox="0 0 100 100" className="size-6 text-white animate-[spin_10s_linear_infinite]" fill="none" stroke="currentColor" strokeWidth="2.5">
+            {/* 3 Орбиты атома */}
+            <ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(0 50 50)" />
+            <ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(60 50 50)" />
+            <ellipse cx="50" cy="50" rx="44" ry="16" transform="rotate(120 50 50)" />
+            
+            {/* Ядро атома (Разноцветные протоны и нейтроны) */}
+            <g stroke="none">
+              <circle cx="50" cy="50" r="4.5" fill="#ef4444" /> {/* Красный */}
+              <circle cx="42" cy="46" r="4.5" fill="#38bdf8" /> {/* Синий */}
+              <circle cx="58" cy="46" r="4.5" fill="#ef4444" /> {/* Красный */}
+              <circle cx="44" cy="56" r="4.5" fill="#38bdf8" /> {/* Синий */}
+              <circle cx="56" cy="56" r="4.5" fill="#ef4444" /> {/* Красный */}
+              <circle cx="50" cy="40" r="4.5" fill="#38bdf8" /> {/* Синий */}
+              <circle cx="50" cy="60" r="4.5" fill="#ef4444" /> {/* Красный */}
+            </g>
+          </svg>
         </span>
         <span className="font-display text-sm font-semibold tracking-wide text-white">
           asweb<span className="text-yellow-300">.tech</span>
