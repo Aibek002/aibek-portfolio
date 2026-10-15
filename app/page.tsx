@@ -66,11 +66,11 @@ export default function Page() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="h-11 w-full border-white/15 bg-white/5 text-white hover:bg-white/10 md:w-auto">
-              <Link href="/resume" className="flex items-center justify-center gap-2">
+            <Link href="/resume" className="inline-flex h-11 w-full items-center justify-center rounded-md border border-white/15 bg-white/5 px-8 text-sm font-medium text-white transition-colors hover:bg-white/10 md:w-auto">
+              <span className="flex items-center justify-center gap-2">
                 Посмотреть резюме
-              </Link>
-            </Button>
+              </span>
+            </Link>
           </div>
         </div>
 
